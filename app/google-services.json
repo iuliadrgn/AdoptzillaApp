@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "318729119443",
+    "firebase_url": "https://adoptzilla-cf8a9-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "adoptzilla-cf8a9",
+    "storage_bucket": "adoptzilla-cf8a9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:318729119443:android:f6b88905ccd1b937e9d626",
+        "android_client_info": {
+          "package_name": "com.example.adoptzilla"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "318729119443-61kh06ieddq0ebiuu47teifonmj6d9pr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoRPLDbQ2v1M9O8yDP6eEDSmY2-MAREbI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "318729119443-61kh06ieddq0ebiuu47teifonmj6d9pr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
