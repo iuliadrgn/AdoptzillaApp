@@ -23,6 +23,8 @@ public class Register extends AppCompatActivity {
     FirebaseAuth fAuth;
     ProgressBar progressBar;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,6 +88,16 @@ public class Register extends AppCompatActivity {
                 });
             }
         });
+
+
+        Button back = findViewById(R.id.backButton);
+        back.setOnClickListener(v -> backToLogin());
+
+
+    }
+    private void backToLogin() {
+        Intent intent = new Intent(this, Login.class);
+        startActivity(intent);
     }
 
     public void login(View view)
@@ -93,4 +105,6 @@ public class Register extends AppCompatActivity {
         startActivity(new Intent(getApplicationContext(), Login.class));
         finish();
     }
+
+
 }
