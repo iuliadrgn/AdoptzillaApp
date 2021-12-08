@@ -6,7 +6,8 @@
     <string name="adopt">Adopt</string>
     <string name="zilla">zilla</string>
     <string name="register">Register</string>
-    <string name="visitor">Visitor</string>
+    <string name="fullname">full name</string>
+    <string name="phone">phone</string>
     <string name="email">email</string>
     <string name="password">password</string>
     <string name="backButton">❮</string>
