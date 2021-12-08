@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Adoptzilla</string>
+    <string name="app_id">AdoptzillaApp</string>
+    <string name="login">Log in</string>
+    <string name="logout">Log out</string>
+    <string name="adopt">Adopt</string>
+    <string name="zilla">zilla</string>
+    <string name="register">Register</string>
+    <string name="visitor">Visitor</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="backButton">❮</string>
 </resources>
