@@ -27,6 +27,8 @@ TextView ceva;
 Button btn;
 DatabaseReference reff;
 
+
+
     ListView simpleList;
     String countryList[] = {"India", "China", "australia", "Portugle", "America", "NewZealand"};
     ArrayList<String> arrayList = new ArrayList<>();
@@ -39,12 +41,21 @@ DatabaseReference reff;
         simpleList = (ListView)findViewById(R.id.ads);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.activity_listview, R.id.textView, countryList);
         simpleList.setAdapter(arrayAdapter);
+
+        Button newAd = findViewById(R.id.new_ad);
+        newAd.setOnClickListener(v -> newAd());
     }
 
     public void logout(View view)
     {
         FirebaseAuth.getInstance().signOut();
         startActivity(new Intent(getApplicationContext(), Login.class));
+        finish();
+    }
+
+    private void newAd() {
+        Intent intent = new Intent(this, NewAd.class);
+        startActivity(intent);
         finish();
     }
 }
