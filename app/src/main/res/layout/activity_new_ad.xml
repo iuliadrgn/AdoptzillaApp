@@ -16,32 +16,28 @@
         android:text="@string/backButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.021" />
+        app:layout_constraintVertical_bias="0.061" />
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="299dp"
         android:layout_height="80dp"
+
         android:layout_marginStart="56dp"
-
-        android:layout_marginTop="75dp"
         android:layout_marginEnd="56dp"
-        android:layout_marginBottom="576dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo2"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="42dp" />
 
     <EditText
         android:id="@+id/newAdPetName"
-        android:layout_width="250dp"
+        android:layout_width="245dp"
         android:layout_height="48dp"
         android:backgroundTint="@color/white"
         android:ems="10"
@@ -90,7 +86,25 @@
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.66" />
+        app:layout_constraintVertical_bias="0.553" />
+
+    <EditText
+        android:id="@+id/newAdPetAddress"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="petAddress"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.653" />
 
     <EditText
         android:id="@+id/newAdPetAge"
@@ -108,7 +122,7 @@
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.515"
+        app:layout_constraintVertical_bias="0.452"
         tools:ignore="TextContrastCheck" />
 
     <Spinner
@@ -124,7 +138,7 @@
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.374" />
+        app:layout_constraintVertical_bias="0.355" />
 
     <Button
         android:id="@+id/done"
