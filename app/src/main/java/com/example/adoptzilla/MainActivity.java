@@ -29,21 +29,21 @@ DatabaseReference reff;
 
 
 
-    ListView simpleList;
-    String countryList[] = {"India", "China", "australia", "Portugle", "America", "NewZealand"};
+
     ArrayList<String> arrayList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Ad d;
-        simpleList = (ListView)findViewById(R.id.ads);
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.activity_listview, R.id.textView, countryList);
-        simpleList.setAdapter(arrayAdapter);
+
 
         Button newAd = findViewById(R.id.new_ad);
         newAd.setOnClickListener(v -> newAd());
+
+        Button seeads = findViewById(R.id.see_ads);
+        seeads.setOnClickListener(v -> seeAds());
+
     }
 
     public void logout(View view)
@@ -55,6 +55,13 @@ DatabaseReference reff;
 
     private void newAd() {
         Intent intent = new Intent(this, NewAd.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void seeAds()
+    {
+        Intent intent = new Intent(this, BrowseActivity.class);
         startActivity(intent);
         finish();
     }

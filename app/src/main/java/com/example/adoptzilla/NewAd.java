@@ -30,6 +30,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.StorageTask;
 
@@ -84,16 +85,21 @@ public class NewAd extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         petType.setAdapter(adapter);
 
+
         auth = FirebaseAuth.getInstance();
 
+        if (auth.getCurrentUser() == null) {
+            startActivity(new Intent(getApplicationContext(), Login.class));
+            finish();
+        }
+
         fStore = FirebaseFirestore.getInstance();
-
         member = new Member();
-
-
 
         Button backButton = findViewById(R.id.newAdBackButton);
         backButton.setOnClickListener(v -> backToMainPage());
+
+        storageReference = FirebaseStorage.getInstance().getReference("uploads");
         databaseReference = FirebaseDatabase.getInstance().getReference("uploads");
         activityResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
             if (result.getResultCode() == RESULT_OK && result.getData() != null) {
@@ -160,28 +166,37 @@ public class NewAd extends AppCompatActivity {
         }
 
         String uploadId = databaseReference.push().getKey();
-            Upload upload = new Upload(petName.getText().toString().trim(),
-                    petType.getSelectedItem().toString(),
-                    petAge.getText().toString().trim(),
-                    petDescription.getText().toString().trim(),
-                    getFileName(imageUri),
-                    Objects.requireNonNull(auth.getCurrentUser()).getEmail(),
-                    petAddress.getText().toString().trim(),
-                    uploadId
-            );
-            DocumentReference documentReference = fStore.collection("uploads").document(uploadId);
-            Map<String, String> upl = new HashMap<>();
-            upl.put("petName", upload.getPetName());
-            upl.put("petType", upload.getPetType());
-            upl.put("petAge", upload.getPetAge());
-            upl.put("petDescription", upload.getDescription());
-            upl.put("imgName", upload.getImgName());
-            upl.put("currentUser", upload.getCurrentUser());
-            upl.put("address", upload.getAddress());
-            documentReference.set(upl).addOnSuccessListener(unused -> Log.d("TAG", "onSuccess: entry is created for : " + "aminal" + "\n")).addOnFailureListener(e -> Log.d("TAG", "onFailure: " + e.toString()));
-            startActivity(new Intent(getApplicationContext(), NewAd.class));
-            finish();
+
+        if (imageUri != null) {
+            StorageReference fileReference = storageReference.child(System.currentTimeMillis() + "." + getImageExtension(imageUri));
+            storageTask = fileReference.putFile(imageUri).addOnSuccessListener(taskSnapshot -> {
+                Toast.makeText(NewAd.this, "Ad saved successfully\n", Toast.LENGTH_SHORT).show();
+                Upload upload = new Upload(petName.getText().toString().trim(),
+                        petType.getSelectedItem().toString(),
+                        petAge.getText().toString().trim(),
+                        petDescription.getText().toString().trim(),
+                        fileReference.getName(),
+                        Objects.requireNonNull(auth.getCurrentUser()).getEmail(),
+                        petAddress.getText().toString().trim(),
+                        uploadId
+                );
+                DocumentReference documentReference = fStore.collection("uploads").document(uploadId);
+                Map<String, String> upl = new HashMap<>();
+                upl.put("petName", upload.getPetName());
+                upl.put("petType", upload.getPetType());
+                upl.put("petAge", upload.getPetAge());
+                upl.put("petDescription", upload.getDescription());
+                upl.put("imgName", upload.getImgName());
+                upl.put("currentUser", upload.getCurrentUser());
+                upl.put("address", upload.getAddress());
+                documentReference.set(upl).addOnSuccessListener(unused -> Log.d("TAG", "onSuccess: entry is created for : " + "aminal" + "\n")).addOnFailureListener(e -> Log.d("TAG", "onFailure: " + e.toString()));
+                startActivity(new Intent(getApplicationContext(), NewAd.class));
+                finish();
+            });
+        }
     }
+
+
 
     private void backToMainPage() {
         Intent intent = new Intent(this, MainActivity.class);
