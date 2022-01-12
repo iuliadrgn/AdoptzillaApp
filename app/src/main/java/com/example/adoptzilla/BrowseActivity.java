@@ -41,6 +41,7 @@ public class BrowseActivity extends AppCompatActivity {
     FirebaseAuth auth;
     private ImageView imageViewPet;
     Spinner petSort;
+    Spinner petFilter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +56,7 @@ public class BrowseActivity extends AppCompatActivity {
             finish();
         }
         petSort = findViewById(R.id.spinner_sort);
+        petFilter = findViewById(R.id.spinner_filter);
 
         imageViewPet = findViewById(R.id.imageViewPet);
         mRecyclerView = findViewById(R.id.recycler_view_browse);
@@ -66,8 +68,8 @@ public class BrowseActivity extends AppCompatActivity {
         mAdapter = new ImageAdapter(BrowseActivity.this,mUploads);
         mRecyclerView.setAdapter(mAdapter);
         EventChangeListener();
-
         sortPets();
+        filterByType();
 
     }
     private void EventChangeListener() {
@@ -114,6 +116,134 @@ public class BrowseActivity extends AppCompatActivity {
     private void sortByAge(){
         Collections.sort(mUploads, Comparator.comparing(Upload::getPetAge));
         mRecyclerView.setAdapter(mAdapter);
+    }
+
+    private void filterByType(){
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.pet_types, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        petFilter.setAdapter(adapter);
+        petFilter.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @RequiresApi(api = Build.VERSION_CODES.N)
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
+                switch(position) {
+
+                    case 1 : {
+                        showCats();
+                        break;
+                    }
+                    case 2 : {
+                        showDogs();
+                        break;
+                    }
+
+                    case 3 : {
+                        showPigs();
+                        break;
+                    }
+
+                    case 4 : {
+                        showBirds();
+                        break;
+                    }
+
+                    case 5 : {
+                        showGoats();
+                        break;
+                    }
+                    default : mRecyclerView.setAdapter(mAdapter);
+                }
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+
+        });
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    private void showCats() {
+        ImageAdapter mAdapterAux;
+        List<Upload> mUploadsAux;
+        mUploadsAux = new ArrayList<>();
+        mAdapterAux = new ImageAdapter(BrowseActivity.this,mUploadsAux);
+        for(Upload u : mUploads )  {
+            if (u.getPetType().contains("Cat")) {
+                mUploadsAux.add(u);
+            }
+        }
+        mRecyclerView.setAdapter(mAdapterAux);
+        mAdapterAux.notifyDataSetChanged();
+
+    }
+
+    private void showDogs() {
+        ImageAdapter mAdapterAux;
+        List<Upload> mUploadsAux;
+        mUploadsAux = new ArrayList<>();
+        mAdapterAux = new ImageAdapter(BrowseActivity.this,mUploadsAux);
+
+        for(Upload u : mUploads )  {
+            if (u.getPetType().contains("Dog")) {
+                mUploadsAux.add(u);
+            }
+        }
+
+        mRecyclerView.setAdapter(mAdapterAux);
+        mAdapterAux.notifyDataSetChanged();
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    private void showPigs() {
+        ImageAdapter mAdapterAux;
+        List<Upload> mUploadsAux;
+        mUploadsAux = new ArrayList<>();
+        mAdapterAux = new ImageAdapter(BrowseActivity.this,mUploadsAux);
+        for(Upload u : mUploads )  {
+            if (u.getPetType().contains("Pig")) {
+                mUploadsAux.add(u);
+            }
+        }
+        mRecyclerView.setAdapter(mAdapterAux);
+        mAdapterAux.notifyDataSetChanged();
+
+    }
+
+    private void showBirds() {
+        ImageAdapter mAdapterAux;
+        List<Upload> mUploadsAux;
+        mUploadsAux = new ArrayList<>();
+        mAdapterAux = new ImageAdapter(BrowseActivity.this,mUploadsAux);
+
+        for(Upload u : mUploads )  {
+            if (u.getPetType().contains("Bird")) {
+                mUploadsAux.add(u);
+            }
+        }
+
+        mRecyclerView.setAdapter(mAdapterAux);
+        mAdapterAux.notifyDataSetChanged();
+    }
+
+    private void showGoats() {
+        ImageAdapter mAdapterAux;
+        List<Upload> mUploadsAux;
+        mUploadsAux = new ArrayList<>();
+        mAdapterAux = new ImageAdapter(BrowseActivity.this,mUploadsAux);
+
+        for(Upload u : mUploads )  {
+            if (u.getPetType().contains("Goat")) {
+                mUploadsAux.add(u);
+            }
+        }
+
+        mRecyclerView.setAdapter(mAdapterAux);
+        mAdapterAux.notifyDataSetChanged();
     }
 
     private void backToMain() {

@@ -27,4 +27,12 @@
         <item>on</item>
         <item>off</item>
     </string-array>
+    <string-array name="pet_types">
+    <item>pet type:</item>
+    <item>Cat</item>
+    <item>Dog</item>
+    <item>Pig</item>
+    <item>Bird</item>
+    <item>Goat</item>
+    </string-array>
 </resources>
