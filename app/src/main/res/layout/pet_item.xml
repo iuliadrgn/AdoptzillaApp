@@ -23,14 +23,6 @@
             android:orientation="horizontal"
             tools:ignore="MissingConstraints">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/pet_name"
-                android:layout_marginStart="8dp"
-
-                android:textColor="@color/darkpurple"
-                android:textSize="20sp"/>
         </LinearLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -43,13 +35,14 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0">
 
+
             <ImageView
                 android:id="@+id/imageViewPet"
-                android:layout_width="115dp"
-                android:layout_height="117dp"
+                android:layout_width="119dp"
+                android:layout_height="121dp"
 
-                android:layout_marginStart="11dp"
-                android:layout_marginBottom="9dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="12dp"
 
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"
@@ -57,13 +50,11 @@
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="ContentDescription" />
 
-
             <TextView
                 android:id="@+id/petAge"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="191dp"
-                android:layout_marginTop="84dp"
                 android:layout_marginEnd="24dp"
                 android:layout_marginBottom="40dp"
                 android:textColor="@color/darkpurple"
@@ -74,8 +65,8 @@
                 app:layout_constraintEnd_toStartOf="@+id/more"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@id/imageViewPet"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
+
+                />
 
             <Button
                 android:id="@+id/more"
@@ -91,6 +82,40 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="39dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="40dp"
+                android:background="@color/white"
+                android:ems="10"
+                android:text="@string/Age"
+                android:textColor="@color/darkpurple"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintStart_toEndOf="@id/imageViewPet"
+
+                tools:ignore="Autofill,LabelFor,TextFields" />
+
+            <TextView
+                android:id="@+id/pet_name"
+                android:layout_width="157dp"
+                android:layout_height="31dp"
+
+                android:layout_marginStart="159dp"
+                android:layout_marginTop="16dp"
+
+                android:layout_marginEnd="93dp"
+                android:layout_marginBottom="95dp"
+                android:textColor="@color/darkpurple"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
