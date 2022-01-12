@@ -9,18 +9,19 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="359dp"
-        android:layout_height="143dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginBottom="567dp"
+        android:layout_width="370dp"
+        android:layout_height="173dp"
+
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="518dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.333"
-        app:srcCompat="@drawable/logo"
-        tools:ignore="MissingClass" />
+        app:srcCompat="@drawable/logo2"
+        tools:ignore="ContentDescription,MissingClass" />
 
 
     <Button
@@ -52,6 +53,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
+
         android:id="@+id/see_ads"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -65,6 +67,40 @@
         app:layout_constraintEnd_toStartOf="@+id/logoutBtn"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="390dp"
+        android:layout_height="230dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="341dp"
+
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="160dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ploada"
+        tools:ignore="ContentDescription,MissingClass" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="126dp"
+        android:layout_height="98dp"
+
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="485dp"
+        android:layout_marginEnd="181dp"
+        android:layout_marginBottom="149dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ghemmm"
+        tools:ignore="ContentDescription,MissingClass" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

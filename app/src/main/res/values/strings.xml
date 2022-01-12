@@ -18,8 +18,22 @@
     <string name="petDescription">pet description</string>
     <string name="addImage">+ image</string>
     <string name="add">add</string>
-    <string name="more">more</string>
+    <string name="more">→</string>
     <string name="addingImage">adding image</string>
     <string name="PetType">pet type</string>
     <string name="SeeAds">See Ads</string>
+    <string-array name="sort_age">
+        <item>sort by age:</item>
+        <item>on</item>
+        <item>off</item>
+    </string-array>
+    <string-array name="pet_types">
+    <item>pet type:</item>
+    <item>Cat</item>
+    <item>Dog</item>
+    <item>Pig</item>
+    <item>Bird</item>
+    <item>Goat</item>
+    </string-array>
+    <string name="Age">Age: </string>
 </resources>

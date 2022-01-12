@@ -77,9 +77,9 @@ public class NewAd extends AppCompatActivity {
         categories.add(0, getString(R.string.PetType));
         categories.add("Cat");
         categories.add("Dog");
-        categories.add("Fish");
+        categories.add("Pig");
         categories.add("Bird");
-        categories.add("Hedgehog");
+        categories.add("Goat");
         ArrayAdapter<String> adapter;
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, categories);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
