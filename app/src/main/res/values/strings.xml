@@ -18,6 +18,8 @@
     <string name="petDescription">pet description</string>
     <string name="addImage">+ image</string>
     <string name="add">add</string>
+    <string name="more">more</string>
     <string name="addingImage">adding image</string>
     <string name="PetType">pet type</string>
+    <string name="SeeAds">See Ads</string>
 </resources>
