@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="0dp"
+    app:cardBackgroundColor="#5E4C80">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="0dp"
+        android:layout_marginStart="0dp"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="407dp"
+            android:layout_height="582dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="#5E4C80"
+            android:paddingStart="0dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="0dp"
+            android:paddingBottom="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <ImageView
+                android:id="@+id/specAdPetImage"
+                android:layout_width="386dp"
+                android:layout_height="276dp"
+
+                android:adjustViewBounds="true"
+                android:contentDescription="imageDescription"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.473"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/specAdPetName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="start"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.039"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/specAdPetImage"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/coomma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=","
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/specAdPetName"
+                app:layout_constraintTop_toBottomOf="@+id/specAdPetImage"
+                app:layout_constraintVertical_bias="0.118" />
+
+            <TextView
+                android:id="@+id/specAdPetAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="start"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/coomma"
+                app:layout_constraintTop_toBottomOf="@+id/specAdPetImage"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/specAdPetDescription"
+                android:layout_width="387dp"
+                android:layout_height="67dp"
+                android:layout_marginBottom="160dp"
+                android:autoSizeMaxTextSize="20dp"
+                android:autoSizeMinTextSize="12dp"
+                android:autoSizeTextType="uniform"
+                android:gravity="start"
+                android:scrollbars="vertical"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/specAdPetName"
+                app:layout_constraintVertical_bias="0.7"
+                tools:targetApi="o" />
+
+            <TextView
+                android:id="@+id/petLocation"
+                android:layout_width="323dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="1dp"
+                android:autoSizeMaxTextSize="20dp"
+                android:autoSizeMinTextSize="12dp"
+                android:autoSizeTextType="uniform"
+                android:ems="10"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/emailAddressContact"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textContact3"
+                app:layout_constraintTop_toBottomOf="@+id/specAdPetDescription" />
+
+            <TextView
+                android:id="@+id/textContact"
+                android:layout_width="52dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="116dp"
+                android:autoSizeMaxTextSize="20dp"
+                android:autoSizeMinTextSize="12dp"
+                android:autoSizeTextType="uniform"
+                android:ems="10"
+                android:text="E-mail"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textContact3"
+                android:layout_width="52dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:autoSizeMaxTextSize="20dp"
+                android:autoSizeMinTextSize="12dp"
+                android:autoSizeTextType="uniform"
+                android:ems="10"
+                android:text="Adresa"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/specAdPetDescription" />
+
+            <TextView
+                android:id="@+id/emailAddressContact"
+                android:layout_width="323dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="200dp"
+                android:layout_marginBottom="116dp"
+                android:autoSizeMaxTextSize="20dp"
+                android:autoSizeMinTextSize="12dp"
+                android:autoSizeTextType="uniform"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.026"
+                app:layout_constraintStart_toEndOf="@+id/textContact" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -74,6 +74,17 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        Button seeMore = holder.seeMore;
+        seeMore.setOnClickListener(v -> {
+            Intent intent = new Intent(mContext, SeeSpecificAd.class);
+            Bundle info = new Bundle();
+            info.putString("imgName",uploadCurrent.getImgName());
+            info.putString("petName",uploadCurrent.getPetName());
+            info.putString("petDescription",uploadCurrent.getPetDescription());
+            intent.putExtras(info);
+            mContext.startActivity(intent);
+        });
     }
 
     @Override
@@ -86,6 +97,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
     public class ImageViewHolder extends RecyclerView.ViewHolder {
         TextView petName, petAge;
         ImageView imgName;
+        Button seeMore;
 
         public ImageViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -93,7 +105,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
             imgName = itemView.findViewById(R.id.imageViewPet);
             petAge = itemView.findViewById(R.id.petAge);
 
-
+            seeMore = itemView.findViewById(R.id.more);
         }
     }
 }
