@@ -102,8 +102,11 @@ public class BrowseActivity extends AppCompatActivity {
                 if(position==1){
                     sortByAge();
                 }
-              else
-                mAdapter.notifyDataSetChanged();
+              else{
+                    mRecyclerView.setAdapter(mAdapter);
+                    mAdapter.notifyDataSetChanged();
+                }
+
             }
 
             @Override

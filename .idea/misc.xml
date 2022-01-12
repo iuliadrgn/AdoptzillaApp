@@ -3,20 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Faculta/Anul_4/Sem1/SMA/Adoptzilla/app/src/main/res/layout/activity_browse.xml" value="0.303125" />
-        <entry key="..\:/Faculta/Anul_4/Sem1/SMA/Adoptzilla/app/src/main/res/layout/activity_listview.xml" value="0.20677083333333332" />
-        <entry key="..\:/Faculta/Anul_4/Sem1/SMA/Adoptzilla/app/src/main/res/layout/activity_login.xml" value="0.21197916666666666" />
-        <entry key="..\:/Faculta/Anul_4/Sem1/SMA/Adoptzilla/app/src/main/res/layout/activity_main.xml" value="0.21197916666666666" />
-        <entry key="..\:/Faculta/Anul_4/Sem1/SMA/Adoptzilla/app/src/main/res/layout/activity_more.xml" value="0.20885416666666667" />
-        <entry key="..\:/Faculta/Anul_4/Sem1/SMA/Adoptzilla/app/src/main/res/layout/activity_new_ad.xml" value="0.33" />
-        <entry key="..\:/Faculta/Anul_4/Sem1/SMA/Adoptzilla/app/src/main/res/layout/activity_see_specific_ad.xml" value="0.33" />
-        <entry key="..\:/Faculta/Anul_4/Sem1/SMA/Adoptzilla/app/src/main/res/layout/pet_item.xml" value="0.7871591908531222" />
-        <entry key="..\:/Faculta/Anul_4/Sem1/SMA/Adoptzilla/app/src/main/res/layout/spec_ad_pet_image.xml" value="0.484569572279372" />
+        <entry key="..\:/Users/iulia/AndroidStudioProjects/AdoptzillaApp/app/src/main/res/layout/activity_browse.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/iulia/AndroidStudioProjects/AdoptzillaApp/app/src/main/res/layout/activity_listview.xml" value="0.2" />
-        <entry key="..\:/Users/iulia/AndroidStudioProjects/AdoptzillaApp/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/iulia/AndroidStudioProjects/AdoptzillaApp/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/iulia/AndroidStudioProjects/AdoptzillaApp/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/Users/iulia/AndroidStudioProjects/AdoptzillaApp/app/src/main/res/layout/activity_login.xml" value="0.2" />
-        <entry key="..\:/Users/iulia/AndroidStudioProjects/AdoptzillaApp/app/src/main/res/layout/activity_main.xml" value="0.1956521739130435" />
         <entry key="..\:/Users/iulia/AndroidStudioProjects/AdoptzillaApp/app/src/main/res/layout/activity_new_ad.xml" value="0.259375" />
         <entry key="..\:/Users/iulia/AndroidStudioProjects/AdoptzillaApp/app/src/main/res/layout/activity_register.xml" value="0.264" />
         <entry key="..\:/Users/iulia/AndroidStudioProjects/AdoptzillaApp/app/src/main/res/layout/pet_item.xml" value="0.536" />
